@@ -1,0 +1,23 @@
+.combo__cards{
+    padding: 15px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.header{
+    font-size: 28px;
+    text-align: center;
+    color: #fff;
+}
+
+.info__description{
+    color: #fff;
+    font-size: 20px;
+}
+
+.info__value{
+    font-size: 28px;
+    color: #e4b552;
+}

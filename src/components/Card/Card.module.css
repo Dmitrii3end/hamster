@@ -1,0 +1,83 @@
+.card{
+    position: relative;
+    width: 100%;
+    background: #272a2f;
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.cardNumber{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.card__image{
+    width: calc(40% - 5px);
+    padding: 10px;
+    object-fit: contain;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.text{
+    color: #8b8e93;
+    font-size: 12px;
+}
+
+.card__info p{
+    color: #8b8e93;
+    font-size: 12px;
+}
+
+.card__section, .card__profit, .card__cost{
+    color: #8b8e93;
+    font-size: 12px;
+}
+
+.main_text{
+    color: #fff;
+}
+
+.card__profit, .card__cost{
+    display: flex;
+    gap: 3px;
+}
+
+.coin{
+    width: 16px;
+}
+
+.value{
+    color: #fff;
+    font-size: 16px;
+}
+
+.level{
+    display: flex;
+    gap: 20px;
+}
+
+.button{
+    padding: 10px;
+    background: #1c1f24;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 20px;
+    min-width: 45px;
+}
+
+.input{
+    padding: 2px 5px;
+    font-size: 20px;
+    border-radius: 6px;
+    width: 100%;
+}
