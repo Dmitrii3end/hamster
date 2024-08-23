@@ -6,7 +6,6 @@ import Card from '../Card/Card';
 
 const Cards = observer(() => {
     const [sorted, setSorted] = useState(true);
-    console.log(CardsStore.cards)
 
     function sort(){
         sorted ? CardsStore.sortByValue() : CardsStore.sortBySection();

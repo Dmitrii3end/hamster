@@ -14,7 +14,6 @@ class CardsStore {
     }
 
     sortBySection(){
-        console.log('sortBySection')
         this.cards = this.cards.sort((a, b) => a.startPos - b.startPos);
     }
 

@@ -10,7 +10,7 @@ const Card = observer(({idCard}) => {
     <div className={style.card}>
         <div className={style.cardNumber}></div>
 
-        <img className={style.card__image} src={URL + '/imgs/' + CardsStore.cards[idCard].id + '.webp'} alt={CardsStore.cards[idCard].id} />
+        <img className={style.card__image} src={`https://hamsterkombatgame.io/images/upgrade/${CardsStore.cards[idCard].id}.webp`} alt={CardsStore.cards[idCard].id} />
 
         <div className={style.info}>
             <p className={style.text}>{CardsStore.cards[idCard].section}</p>
