@@ -8,7 +8,7 @@ import { observer } from 'mobx-react-lite';
 const Card = observer(({idCard}) => {
   return (
     <div className={style.card}>
-        <div className={style.cardNumber}></div>
+        <div className={style.cardNumber}>{idCard + 1}</div>
 
         <img className={style.card__image} src={`https://hamsterkombatgame.io/images/upgrade/${CardsStore.cards[idCard].id}.webp`} alt={CardsStore.cards[idCard].id} />
 

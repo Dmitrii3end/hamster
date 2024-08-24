@@ -13,4 +13,13 @@
     color: #fff;
     font-size: 20px;
     min-width: 45px;
+    width: 100%;
+}
+
+@media screen and (min-width: 650px){
+    .cards{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
