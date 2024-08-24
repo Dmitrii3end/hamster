@@ -3,14 +3,22 @@ import { STARTCARDS } from "../const/const";
 import { COSTCARDCOEFFICIENT, COSTCARDCOEFFICIENTMULT } from "../const/const";
 
 class CardsStore {
-    cards = [...STARTCARDS];
+    cards = [];
 
     constructor(){
         makeAutoObservable(this);
+
+        let cards = localStorage.getItem('cards');
+
+        cards? this.update(JSON.parse(cards)) : this.cards = [...STARTCARDS];
     }
 
     sortByValue(){
         this.cards = this.cards.sort((a, b) => a.value - b.value);
+    }
+
+    update(cardsArray){
+        this.cards = [...cardsArray];
     }
 
     sortBySection(){
@@ -19,6 +27,16 @@ class CardsStore {
 
     setCards(payload){
         this.cards = payload;
+    }
+
+    getCost(cardName){
+        let card = this.cards.find((e) => e.name === cardName)
+        return card? card.price : 0;
+    }
+
+    getProfitPerHourDelta(cardName){
+        let card = this.cards.find((e) => e.name === cardName)
+        return card? card.profitPerHourDelta : 0;
     }
 
     changeCardLvl(id, newLvl){
@@ -33,22 +51,6 @@ class CardsStore {
         cards[id].profitPerHourDelta = getProfit(newLvl, cards[id].startCurrentProfitPerHour);
         cards[id].value = cards[id].price / cards[id].profitPerHourDelta;
         this.setCards(cards);
-    }
-
-    get level(){
-        return this.level;
-    }
-
-    get name(){
-        return this.name;
-    }
-
-    get id(){
-        return this.id;
-    }
-
-    get currentProfitPerHour(){
-        return this.currentProfitPerHour;
     }
 }
 

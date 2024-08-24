@@ -5,3 +5,12 @@
     gap: 5px;
     padding: 20px 0;
 }
+
+.button{
+    padding: 10px;
+    background: #272a2f;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 20px;
+    min-width: 45px;
+}

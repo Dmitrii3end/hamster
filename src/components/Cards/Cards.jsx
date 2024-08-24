@@ -13,10 +13,10 @@ const Cards = observer(() => {
     }
   return (
     <div className={style.cards}>
-        <button onClick={() => sort()}>сортировать по {sorted? 'прибыли' : 'порядку'}</button>
-      {CardsStore.cards.map((card, id) => 
-        <Card key={card.id} idCard={id}></Card>
-        )}
+        <button className={style.button} onClick={() => sort()}>сортировать по {sorted? 'прибыли' : 'порядку'}</button>
+        {CardsStore.cards.map((card, id) => 
+            <Card key={card.id} idCard={id}></Card>
+          )}
     </div>
   )
 });

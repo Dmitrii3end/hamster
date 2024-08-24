@@ -1,29 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ComboCard from '../ComboCard/ComboCard';
 import style from './DailyCombo.module.css';
-import { STARTCARDS } from '../../const/const';
+import comboCardStore from '../../store/comboCard';
+import cards from '../../store/cards';
 
-const DailyCombo = ({cardsArray}) => {
-    const [testCombo, setTestCombo] = useState([STARTCARDS[0], STARTCARDS[1], STARTCARDS[2]]);
-    
+const DailyCombo = () => {
+        let cost = comboCardStore.cards.reduce((acc, card) => {
+            return cards.getCost(card.name) + acc
+        }, 0);
+        let profit = comboCardStore.cards.reduce((acc, card) => {
+            return cards.getProfitPerHourDelta(card.name) + acc
+        }, 0);
+
   return (
     <div>
         <h2 className={style.header}>Комбо карты на 20.08.24 - 21.08.24</h2>
 
         <div className={style.combo__cards}>
-            {testCombo.map((e) => 
-                <ComboCard key={e.name} cardName={e.name} cardSection={e.section} cardID={e.id}></ComboCard>
+            {comboCardStore.cards.map((e, id) => 
+                <ComboCard key={e} cardID={id}></ComboCard>
             )}
         </div>
 
         <div>
             <div>
                 <span className={style.info__description}>Стоимость комбо: </span>
-                <span className={style.info__value}>500000</span>
+                <span className={style.info__value}>{cost}</span>
             </div>
             <div>
                 <span className={style.info__description}>Итоговая рибыль в час: </span>
-                <span className={style.info__value}>1200</span>
+                <span className={style.info__value}>{profit}</span>
             </div>
         </div>
     </div>
