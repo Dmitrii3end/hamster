@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import style from './MainPage.module.css';
 import Container from '../../common/Container/Container';
 import DailyCombo from '../../components/DailyCombo/DailyCombo';

@@ -18,7 +18,7 @@ const DailyCombo = () => {
 
         <div className={style.combo__cards}>
             {comboCardStore.cards.map((e, id) => 
-                <ComboCard key={e} cardID={id}></ComboCard>
+                <ComboCard key={e.name} cardID={id}></ComboCard>
             )}
         </div>
 

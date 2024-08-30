@@ -13,8 +13,46 @@ class CardsStore {
         cards? this.update(JSON.parse(cards)) : this.cards = [...STARTCARDS];
     }
 
+    // sortByValue(){
+    //     this.cards = this.cards.sort((a, b) => a.value - b.value);
+    // }
+
     sortByValue(){
-        this.cards = this.cards.sort((a, b) => a.value - b.value);
+        let nowDay = new Date();
+    
+        this.cards.sort((a, b) =>{
+            if (((a.expiresAt == undefined) || (nowDay < new Date(a.expiresAt))) && ((b.expiresAt == undefined) || (nowDay < new Date(b.expiresAt)))){
+                return a.value - b.value;
+            }
+    
+            if (a.expiresAt == undefined) return -1;
+    
+            return 1;
+        })
+    }   
+    
+    addCards(newArr){
+        let arr = [...this.arr]
+        if (arr.length == newArr.length) return
+    
+        arr.sort((a, b) => a.startPos - b.startPos);
+    
+        newArr.forEach((element) => {
+            if (element.profitPerHour){
+                if (!arr.find((e) => e.name == element.name)){
+                    element.startCost = element.cost;
+                    element.startCurrentProfitPerHour = element.profitPerHourDelta;
+                    element.value = element.cost / element.profitPerHourDelta;
+
+                    arr.push(element);
+                }
+            }
+        });
+
+        arr.sort((a, b) => a.section - b.section);
+        arr.forEach((e, id) => e.startPos = id);
+
+        this.cards = [...arr];
     }
 
     update(cardsArray){
