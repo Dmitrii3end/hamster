@@ -1,4 +1,4 @@
-// export const URL = 'http://localhost:3000';
+export const URL = 'http://localhost:3000';
 export const STARTCARDS = [
     {
         "id": "ceo",
@@ -72,6 +72,7 @@ export const STARTCARDS = [
         "id": "facebook_ads",
         "name": "HamsterBook",
         "price": 500,
+        "image": 'facebook_ads.svg',
         "profitPerHour": 70,
         "condition": null,
         "section": "PR&Team",
@@ -110,6 +111,7 @@ export const STARTCARDS = [
         "id": "x",
         "name": "X",
         "price": 550,
+        "image": "x.svg",
         "profitPerHour": 80,
         "condition": null,
         "section": "PR&Team",
@@ -127,6 +129,7 @@ export const STARTCARDS = [
         "id": "medium",
         "name": "Cointelegraph",
         "price": 350,
+        "image": "Cointelegraph.svg",
         "profitPerHour": 40,
         "condition": null,
         "section": "PR&Team",
@@ -144,6 +147,7 @@ export const STARTCARDS = [
         "id": "instagram",
         "name": "HamsterGram",
         "price": 500,
+        "image": "HamsterGram.svg",
         "profitPerHour": 50,
         "condition": {
             "_type": "ByUpgrade",
@@ -165,6 +169,7 @@ export const STARTCARDS = [
         "id": "tiktok",
         "name": "TikTok",
         "price": 750,
+        "image": "TikTok.svg",
         "profitPerHour": 100,
         "condition": {
             "_type": "ByUpgrade",
@@ -186,6 +191,7 @@ export const STARTCARDS = [
         "id": "reddit",
         "name": "Сoindesk",
         "price": 1000,
+        "image": "Сoindesk.svg",
         "profitPerHour": 80,
         "condition": {
             "_type": "ByUpgrade",
@@ -207,6 +213,7 @@ export const STARTCARDS = [
         "id": "influencers",
         "name": "Influencers",
         "price": 2500,
+        "image": "Influencers.svg",
         "profitPerHour": 270,
         "condition": {
             "_type": "ByUpgrade",
@@ -228,6 +235,7 @@ export const STARTCARDS = [
         "id": "partnership_program",
         "name": "Partnership program",
         "price": 500,
+        "image": "partnership_program.svg",
         "profitPerHour": 70,
         "condition": {
             "_type": "ByUpgrade",
@@ -249,6 +257,7 @@ export const STARTCARDS = [
         "id": "product_team",
         "name": "Product team",
         "price": 1000,
+        "image": "product_team.svg",
         "profitPerHour": 100,
         "condition": {
             "_type": "ByUpgrade",
@@ -270,6 +279,7 @@ export const STARTCARDS = [
         "id": "bisdev_team",
         "name": "BisDev team",
         "price": 500,
+        "image": "bisdev_team.svg",
         "profitPerHour": 50,
         "condition": {
             "_type": "ByUpgrade",
@@ -291,6 +301,7 @@ export const STARTCARDS = [
         "id": "two_factor_authentication",
         "name": "Two factor authentication",
         "price": 1000,
+        "image": "two_factor_authentication.svg",
         "profitPerHour": 125,
         "condition": {
             "_type": "MoreReferralsCount",
@@ -672,6 +683,7 @@ export const STARTCARDS = [
         "id": "staking",
         "name": "Staking",
         "price": 3500,
+        "image": "Staking.svg",
         "profitPerHour": 600,
         "condition": {
             "_type": "ByUpgrade",
@@ -693,6 +705,7 @@ export const STARTCARDS = [
         "id": "btc_pairs",
         "name": "BTC pairs",
         "price": 250,
+        "image": "btc_pairs.svg",
         "profitPerHour": 40,
         "condition": null,
         "section": "Markets",
@@ -710,6 +723,7 @@ export const STARTCARDS = [
         "id": "eth_pairs",
         "name": "ETH pairs",
         "price": 300,
+        "image": "eth_pairs.svg",
         "profitPerHour": 40,
         "condition": null,
         "section": "Markets",
@@ -727,6 +741,7 @@ export const STARTCARDS = [
         "id": "top_10_cmc_pairs",
         "name": "Top 10 cmc pairs",
         "price": 1000,
+        "image": "top_10_cmc_pairs.svg",
         "profitPerHour": 80,
         "condition": null,
         "section": "Markets",
@@ -744,6 +759,7 @@ export const STARTCARDS = [
         "id": "gamefi_tokens",
         "name": "GameFi tokens",
         "price": 500,
+        "image": "gamefi_tokens.svg",
         "profitPerHour": 70,
         "condition": {
             "_type": "ByUpgrade",
@@ -765,6 +781,7 @@ export const STARTCARDS = [
         "id": "defi2.0_tokens",
         "name": "Defi2.0 tokens",
         "price": 500,
+        "image": "defi.svg",
         "profitPerHour": 40,
         "condition": {
             "_type": "ByUpgrade",
@@ -786,6 +803,7 @@ export const STARTCARDS = [
         "id": "socialfi_tokens",
         "name": "SocialFi tokens",
         "price": 500,
+        "image": "socialfi_tokens.svg",
         "profitPerHour": 50,
         "condition": {
             "_type": "ByUpgrade",
@@ -828,6 +846,7 @@ export const STARTCARDS = [
         "id": "shit_coins",
         "name": "Shit coins",
         "price": 5000,
+        "image": "shit_coins.svg",
         "profitPerHour": 590,
         "condition": {
             "_type": "ByUpgrade",
@@ -849,6 +868,7 @@ export const STARTCARDS = [
         "id": "margin_trading_x10",
         "name": "Margin trading x10",
         "price": 2500,
+        "image": "margin_trading_x10.svg",
         "profitPerHour": 275,
         "condition": {
             "_type": "ByUpgrade",
@@ -870,6 +890,7 @@ export const STARTCARDS = [
         "id": "margin_trading_x20",
         "name": "Margin trading x20",
         "price": 2500,
+        "image": "margin_trading_x20.svg",
         "profitPerHour": 350,
         "condition": {
             "_type": "ByUpgrade",
@@ -891,6 +912,7 @@ export const STARTCARDS = [
         "id": "margin_trading_x30",
         "name": "Margin trading x30",
         "price": 3500,
+        "image": "margin_trading_x30.svg",
         "profitPerHour": 500,
         "condition": {
             "_type": "ByUpgrade",
@@ -912,6 +934,7 @@ export const STARTCARDS = [
         "id": "margin_trading_x50",
         "name": "Margin trading x50",
         "price": 10000,
+        "image": "margin_trading_x50.svg",
         "profitPerHour": 1100,
         "condition": {
             "_type": "ByUpgrade",
@@ -933,6 +956,7 @@ export const STARTCARDS = [
         "id": "margin_trading_x75",
         "name": "Margin trading x75",
         "price": 7500,
+        "image": "margin_trading_x75.svg",
         "profitPerHour": 1100,
         "condition": {
             "_type": "ByUpgrade",
@@ -954,6 +978,7 @@ export const STARTCARDS = [
         "id": "margin_trading_x100",
         "name": "Margin trading x100",
         "price": 5000,
+        "image": "margin_trading_x100.svg",
         "profitPerHour": 975,
         "condition": {
             "_type": "ByUpgrade",
@@ -975,6 +1000,7 @@ export const STARTCARDS = [
         "id": "derivatives",
         "name": "Derivatives",
         "price": 2500,
+        "image": "derivatives.svg",
         "profitPerHour": 495,
         "condition": {
             "_type": "ByUpgrade",
@@ -996,6 +1022,7 @@ export const STARTCARDS = [
         "id": "prediction_markets",
         "name": "Prediction markets",
         "price": 1750,
+        "image": "prediction_markets.svg",
         "profitPerHour": 345,
         "condition": {
             "_type": "ReferralCount",
@@ -1016,6 +1043,7 @@ export const STARTCARDS = [
         "id": "web3_integration",
         "name": "Web3 integration",
         "price": 6500,
+        "image": "web3_integration.svg",
         "profitPerHour": 790,
         "condition": {
             "_type": "ByUpgrade",
@@ -1116,6 +1144,7 @@ export const STARTCARDS = [
         "id": "kyc",
         "name": "KYC",
         "price": 100,
+        "image": "kyc.svg",
         "profitPerHour": 10,
         "condition": null,
         "section": "Legal",
@@ -1133,6 +1162,7 @@ export const STARTCARDS = [
         "id": "kyb",
         "name": "KYB",
         "price": 500,
+        "image": "kyb.svg",
         "profitPerHour": 60,
         "condition": null,
         "section": "Legal",
@@ -1150,6 +1180,7 @@ export const STARTCARDS = [
         "id": "legal_opinion",
         "name": "Legal opinion",
         "price": 1000,
+        "image": "legal_opinion.svg",
         "profitPerHour": 60,
         "condition": null,
         "section": "Legal",
@@ -1188,6 +1219,7 @@ export const STARTCARDS = [
         "id": "anti_money_loundering",
         "name": "Anti money loundering",
         "price": 3000,
+        "image": "anti_money_loundering.svg",
         "profitPerHour": 280,
         "condition": null,
         "section": "Legal",
@@ -1939,6 +1971,7 @@ export const STARTCARDS = [
         "id": "usdt_on_ton",
         "name": "USDT on TON",
         "price": 10000,
+        "image": "usdt_on_ton.svg",
         "profitPerHour": 1350,
         "condition": {
             "_type": "ReferralCount",
@@ -1960,6 +1993,7 @@ export const STARTCARDS = [
         "name": "Blockchain Life 2024",
         "expiresAt": "2024-04-17T15:00:00.000Z",
         "price": 200000,
+        "image": "blockchain_life_2024.svg",
         "profitPerHour": 14000,
         "condition": {
             "_type": "ReferralCount",
@@ -1981,6 +2015,7 @@ export const STARTCARDS = [
         "name": "Token2049",
         "expiresAt": "2024-04-23T15:00:00.000Z",
         "price": 100000,
+        "image": "token2049.svg",
         "profitPerHour": 1500,
         "condition": {
             "_type": "ReferralCount",
@@ -2059,6 +2094,7 @@ export const STARTCARDS = [
         "id": "long_squeeze",
         "name": "Long squeeze",
         "price": 30000,
+        "image": "long_squeeze.svg",
         "profitPerHour": 2000,
         "condition": {
             "_type": "ReferralCount",
@@ -2099,6 +2135,7 @@ export const STARTCARDS = [
         "id": "short_squeeze",
         "name": "Short squeeze",
         "price": 35000,
+        "image": "short_squeeze.svg",
         "profitPerHour": 1000,
         "condition": {
             "_type": "MoreReferralsCount",
@@ -2997,6 +3034,7 @@ export const STARTCARDS = [
         "name": "Games in Paris",
         "expiresAt": "2024-08-06T20:59:00.000Z",
         "price": 35000,
+        "image": "adv_integration_0308.png",
         "profitPerHour": 3000,
         "condition": null,
         "section": "Specials",
@@ -3157,6 +3195,7 @@ export const STARTCARDS = [
         },
         "expiresAt": "2024-08-12T20:00:00.000Z",
         "price": 50000,
+        "image": "adv_integration_0908.png",
         "profitPerHour": 4000,
         "condition": null,
         "section": "Specials",

@@ -16,9 +16,14 @@
     font-size: 20px;
 }
 
-.card__image{
-    width: calc(40% - 5px);
+.image{
+    width: 60%;
     padding: 10px;
+    display: flex;
+}
+
+.card__image{
+    width: 100%;
     object-fit: contain;
 }
 

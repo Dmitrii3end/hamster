@@ -4,11 +4,13 @@ import { COSTCARDCOEFFICIENT, COSTCARDCOEFFICIENTMULT } from "../const/const";
 
 class CardsStore {
     cards = [];
+    count = 166;
 
     constructor(){
         makeAutoObservable(this);
 
         let cards = localStorage.getItem('cards');
+        // let cards;
 
         cards? this.update(JSON.parse(cards)) : this.cards = [...STARTCARDS];
     }
@@ -32,7 +34,7 @@ class CardsStore {
     }   
     
     addCards(newArr){
-        let arr = [...this.arr]
+        let arr = this.cards.slice();
         if (arr.length == newArr.length) return
     
         arr.sort((a, b) => a.startPos - b.startPos);
@@ -40,9 +42,9 @@ class CardsStore {
         newArr.forEach((element) => {
             if (element.profitPerHour){
                 if (!arr.find((e) => e.name == element.name)){
-                    element.startCost = element.cost;
+                    element.startCost = element.price;
                     element.startCurrentProfitPerHour = element.profitPerHourDelta;
-                    element.value = element.cost / element.profitPerHourDelta;
+                    element.value = element.price / element.profitPerHourDelta;
 
                     arr.push(element);
                 }

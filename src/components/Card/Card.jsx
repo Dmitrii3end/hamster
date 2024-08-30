@@ -10,7 +10,10 @@ const Card = observer(({idCard}) => {
     <div className={style.card}>
         <div className={style.cardNumber}>{idCard + 1}</div>
 
-        <img className={style.card__image} src={`https://hamsterkombatgame.io/images/upgrade/${CardsStore.cards[idCard].id}.webp`} alt={CardsStore.cards[idCard].id} />
+        <div className={style.image}>
+            <img className={style.card__image} src={CardsStore.cards[idCard].image? require(`../../assets/${CardsStore.cards[idCard].image}`) : `https://hamsterkombatgame.io/images/upgrade/${CardsStore.cards[idCard].id}.webp` } alt={CardsStore.cards[idCard].id} />
+        </div>
+
 
         <div className={style.info}>
             <p className={style.text}>{CardsStore.cards[idCard].section}</p>
@@ -27,9 +30,18 @@ const Card = observer(({idCard}) => {
             <p className={style.main_text}>Уровень:</p>
 
             <div className={style.level}>
-                <button className={style.button} onClick={() => CardsStore.changeCardLvl(idCard, CardsStore.cards[idCard].level - 1)}>-</button>
-                <input className={style.input} value={CardsStore.cards[idCard].level} type="number" onChange={(e) => CardsStore.changeCardLvl(idCard, +e.target.value)}/>
-                <button className={style.button} onClick={() => CardsStore.changeCardLvl(idCard, CardsStore.cards[idCard].level + 1)}>+</button>
+                <button className={style.button} onClick={() => {
+                    CardsStore.changeCardLvl(idCard, CardsStore.cards[idCard].level - 1);
+                    localStorage.setItem('cards', JSON.stringify(CardsStore.cards));
+                }}>-</button>
+                <input className={style.input} value={CardsStore.cards[idCard].level} type="number" onChange={(e) => {
+                    CardsStore.changeCardLvl(idCard, +e.target.value);
+                    localStorage.setItem('cards', JSON.stringify(CardsStore.cards));
+                    }}/>
+                <button className={style.button} onClick={() => {
+                    CardsStore.changeCardLvl(idCard, CardsStore.cards[idCard].level + 1);
+                    localStorage.setItem('cards', JSON.stringify(CardsStore.cards));
+                    }}>+</button>
             </div>
         </div>
     </div>
